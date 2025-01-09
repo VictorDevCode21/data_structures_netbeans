@@ -2,12 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/G:/Java/data_structures_netbeans/src/com/practice/graphs/Graph.java</file>
-            <file>file:/G:/Java/data_structures_netbeans/src/com/practice/nodes/Node.java</file>
-            <file>file:/G:/Java/data_structures_netbeans/src/com/practice/graphs/Vertex.java</file>
-            <file>file:/G:/Java/data_structures_netbeans/src/com/practice/graphs/Edge.java</file>
-            <file>file:/G:/Java/data_structures_netbeans/src/com/practice/nodes/LinkedList.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

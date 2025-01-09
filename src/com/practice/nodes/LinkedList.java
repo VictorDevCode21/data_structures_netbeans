@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.practice.nodes;
+
 import com.practice.graphs.Vertex;
 
 /**
@@ -10,6 +7,7 @@ import com.practice.graphs.Vertex;
  * @author PC
  */
 public class LinkedList<T> {
+
     private Node first;
     private int size;
 
@@ -36,13 +34,13 @@ public class LinkedList<T> {
             }
 
             aux.setNext(node);
-            size ++;
+            size++;
         }
     }
-    
+
     public void add(Vertex start, Vertex end, Integer weight) {
         Node node = new Node(weight);
-        
+
         if (size == 0) {  // Empty List
             first = node;
             size = 1;
@@ -54,13 +52,59 @@ public class LinkedList<T> {
             }
 
             aux.setNext(node);
-            size ++;
+            size++;
         }
+    }
+
+    /**
+     * Adds a value at the beginning of the LinkedList.
+     *
+     * @param value the value to add
+     */
+    public void addFirst(T value) {
+        Node<T> node = new Node<>(value);
+        node.setNext(first);
+        first = node;
+        size++;
+
+    }
+
+    /**
+     * Removes and returns the first element of the LinkedList.
+     *
+     * @return the removed element
+     * @throws IllegalStateException if the list is empty
+     */
+    public T removeFirst() {
+        if (size == 0) {
+            throw new IllegalStateException("Cannot remove from an empty list");
+        }
+
+        T value = (T) first.getValue();
+        first = first.getNext();
+        size--;
+        return value;
+
+    }
+
+    
+    
+     /**
+     * Returns the first element of the LinkedList without removing it.
+     *
+     * @return the first element
+     * @throws IllegalStateException if the list is empty
+     */
+    public T getFirst() {
+        if (size == 0) {
+            throw new IllegalStateException("The list is empty.");
+        }
+        return (T) first.getValue();
     }
 
     /*Algorithms for sum, getIndex, cantNodes*/
 
-    /*Method to sum node values*/
+ /*Method to sum node values*/
 //    public int sum () {
 //        int result = 0;
 //        Node node = first;
@@ -101,7 +145,7 @@ public class LinkedList<T> {
 
         while (node != null) {
             node = node.getNext();
-            result ++;
+            result++;
         }
 
         return result;
@@ -109,7 +153,7 @@ public class LinkedList<T> {
 
     /*getIndex, max, frequency and swap method. */
 
-    /*Method to return the index of the value of the user input*/
+ /*Method to return the index of the value of the user input*/
 //    public Integer getIndexByValue(int value) {
 //        Node node = first;
 //        int current = 0;
@@ -126,7 +170,6 @@ public class LinkedList<T> {
 //    }
 
     /* Method getMax to return the max element in the list */
-
 //    public int getMax() {
 //        int maxValue = 0;
 //        Node node = first;
@@ -144,7 +187,6 @@ public class LinkedList<T> {
 
     /* Method frequency to count the repeated values on the list
     accord to the user input*/
-
 //    public Integer getFrequency (int value) {
 //        Node node = first;
 //        int count = 0;
@@ -201,8 +243,6 @@ public class LinkedList<T> {
 //
 //
 //    }
-
-
     /*Print Method to print the value of the nodes inside the list*/
     public void print() {
         Node node = first;
@@ -214,6 +254,5 @@ public class LinkedList<T> {
             node = node.getNext();
         }
     }
-
 
 }
