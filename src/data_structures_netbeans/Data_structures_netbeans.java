@@ -7,7 +7,7 @@ import com.practice.nodes.Node;
 import com.practice.graphs.Graph;
 import com.practice.lists.ArrayList;
 import com.practice.lists.Stack;
-import com.leetcode.guess_number_374.Solution;
+import com.leetcode.min_cost_climbins_stairs_746.Solution;
 
 public class Data_structures_netbeans {
 
